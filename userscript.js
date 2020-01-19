@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Google
 // @namespace    google
-// @version      0.1.11
+// @version      0.1.12
 // @description  Don't be evil
 // @author       aligo, adambh
 // @license      MIT
@@ -72,7 +72,7 @@
         }
         if ( !bettered ) {
             if ( MutationObserver != undefined ) {
-                var searchEl = document.getElementById('search');
+                var searchEl = document.getElementById('rcnt');
                 var observer = new MutationObserver(runBetterGoogle);
                 observer.observe(searchEl, {childList: true, subtree: true});
             }
@@ -109,5 +109,5 @@
     }
 
     checkElementThenRun('head', prepareStyleSheet);
-    checkElementThenRun('#search', runBetterGoogle);
+    checkElementThenRun('#rcnt', runBetterGoogle);
 })();
