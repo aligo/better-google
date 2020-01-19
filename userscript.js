@@ -1,20 +1,21 @@
 // ==UserScript==
 // @name         Better Google
 // @namespace    google
-// @version      0.1.10
+// @version      0.1.11
 // @description  Don't be evil
-// @author       aligo
+// @author       aligo, adambh
 // @license      MIT
 // @supportURL   https://github.com/aligo/better-google
 // @match        https://*.google.com/search?*
-// @include     /^https?://(?:www|encrypted|ipv[46])\.google\.[^/]+/(?:$|[#?]|search|webhp)/
+// @include      /^https?://(?:www|encrypted|ipv[46])\.google\.[^/]+/(?:$|[#?]|search|webhp)/
 // @grant        none
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-    var betterGoogleRow = (el) => {
+    var betterGoogleRow = function(el) {
         var tbwUpd = el.querySelectorAll('.TbwUpd');
         if (tbwUpd.length > 0) {
             var linkEl = el.querySelector('.r > a');
@@ -56,21 +57,30 @@
             }
 
 
-            tbwUpd.forEach(el => el.remove());
+            tbwUpd.forEach(function(el) { el.remove() });
             linkEl.querySelector('h3').previousSibling.remove();
         }
     }
 
     var prevResultCount = 0;
+    var bettered = false; 
 
-    var runBetterGoogle = () => {
+    var runBetterGoogle = function() {
         if (prevResultCount != document.querySelectorAll('.g .rc').length) {
             document.querySelectorAll('.g .rc').forEach(betterGoogleRow);
             prevResultCount = document.querySelectorAll('.g .rc').length;
         }
+        if ( !bettered ) {
+            if ( MutationObserver != undefined ) {
+                var searchEl = document.getElementById('search');
+                var observer = new MutationObserver(runBetterGoogle);
+                observer.observe(searchEl, {childList: true, subtree: true});
+            }
+            bettered = true;
+        }
     };
 
-    var prepareStyleSheet = () => {
+    var prepareStyleSheet = function() {
         var style = document.createElement('style');
         style.setAttribute('media', 'screen');
         style.appendChild(document.createTextNode(''));
@@ -81,10 +91,23 @@
         style.sheet.insertRule('.btrG .btrLink cite.iUh30 { color: #006621; font-size: 16px; }');
     };
 
-    prepareStyleSheet();
-    runBetterGoogle();
+    var checkElementThenRun = function(selector, func) {
+        var el = document.querySelector(selector);
+        if ( el == null ) {
+            if (window.requestAnimationFrame != undefined) {
+                window.requestAnimationFrame(function(){ checkElementThenRun(selector, func)});
+            } else {
+                document.addEventListener('readystatechange', function(e) {
+                    if (document.readyState == 'complete') {
+                        func();
+                    }
+                });
+            }
+        } else {
+            func();
+        }
+    }
 
-    var searchEl = document.getElementById('search');
-    var observer = new MutationObserver(runBetterGoogle);
-    observer.observe(searchEl, {childList: true, subtree: true});
+    checkElementThenRun('head', prepareStyleSheet);
+    checkElementThenRun('#search', runBetterGoogle);
 })();
