@@ -64,7 +64,7 @@
     }
 
     var prevResultCount = 0;
-    var bettered = false; 
+    var bettered = false;
 
     var runBetterGoogle = function() {
         if (prevResultCount != document.querySelectorAll('.g .rc').length) {
