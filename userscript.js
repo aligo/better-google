@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Google
 // @namespace    google
-// @version      0.1.13
+// @version      0.1.14
 // @description  Don't be evil
 // @author       aligo, adambh
 // @license      MIT
@@ -59,7 +59,7 @@
 
 
             tbwUpd.forEach(function(el) { el.remove() });
-            linkEl.querySelector('h3').previousSibling.remove();
+            linkEl.querySelector('br:first-child').remove();
         }
     }
 
