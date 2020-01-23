@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Google
 // @namespace    google
-// @version      0.1.12
+// @version      0.1.13
 // @description  Don't be evil
 // @author       aligo, adambh
 // @license      MIT
@@ -25,7 +25,8 @@
             betterAddEl.className = 'btrAdd';
 
             if (addEl) {
-                for (var _el of addEl.children) {
+                for (var i = 0; i < addEl.children.length; i++) {
+                    var _el = addEl.children[i];
                     if (_el.className.indexOf('TbwUpd') == -1) {
                         betterAddEl.appendChild(_el);
                     }
