@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Google
 // @namespace    google
-// @version      0.1.14
+// @version      0.1.15
 // @description  Don't be evil
 // @author       aligo, adambh
 // @license      MIT
@@ -18,7 +18,7 @@
     var betterGoogleRow = function(el) {
         var tbwUpd = el.querySelectorAll('.TbwUpd');
         if (tbwUpd.length > 0) {
-            var linkEl = el.querySelector('.r > a');
+            var linkEl = el.querySelector('.yuRUbf > a');
             var addEl = linkEl.nextSibling;
 
             var betterAddEl = document.createElement('div');
@@ -37,7 +37,7 @@
             betterEl.className = 'btrG';
             betterEl.appendChild(betterAddEl);
 
-            el.querySelector('.r').appendChild(betterEl);
+            el.querySelector('.yuRUbf').appendChild(betterEl);
 
             var urlEl = document.createElement('a');
             urlEl.href = linkEl.href;
