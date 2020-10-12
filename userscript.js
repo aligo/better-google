@@ -3,7 +3,7 @@
 // @namespace    google
 // @version      0.1.15
 // @description  Don't be evil
-// @author       aligo, adambh
+// @author       aligo, adambh, tejaslodaya
 // @license      MIT
 // @supportURL   https://github.com/aligo/better-google
 // @match        https://*.google.com/search?*
