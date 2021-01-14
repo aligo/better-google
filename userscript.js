@@ -18,7 +18,7 @@
     var betterGoogleRow = function(el) {
         var tbwUpd = el.querySelectorAll('.TbwUpd');
         if (tbwUpd.length > 0) {
-            var linkEl = el.querySelector('.yuRUbf > a');
+            var linkEl = el.querySelector('a');
             var addEl = linkEl.nextSibling;
 
             var betterAddEl = document.createElement('div');
@@ -37,7 +37,7 @@
             betterEl.className = 'btrG';
             betterEl.appendChild(betterAddEl);
 
-            el.querySelector('.yuRUbf').appendChild(betterEl);
+            el.appendChild(betterEl);
 
             var urlEl = document.createElement('a');
             urlEl.href = linkEl.href;
@@ -67,15 +67,9 @@
     var bettered = false;
 
     var runBetterGoogle = function() {
-        const selectors = [ '.g .rc', '.g .tF2Cxc' ];
-        for (const selector of selectors) {
-            if (prevResultCount != document.querySelectorAll(selector).length) {
-                document.querySelectorAll(selector).forEach(betterGoogleRow);
-                prevResultCount = document.querySelectorAll(selector).length;
-            }
-            if (prevResultCount != 0) {
-                break;
-            }
+        if (prevResultCount != document.querySelectorAll('.g .yuRUbf').length) {
+            document.querySelectorAll('.g .yuRUbf').forEach(betterGoogleRow);
+            prevResultCount = document.querySelectorAll('.g .yuRUbf').length;
         }
         if ( !bettered ) {
             if ( MutationObserver != undefined ) {
