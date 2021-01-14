@@ -67,9 +67,15 @@
     var bettered = false;
 
     var runBetterGoogle = function() {
-        if (prevResultCount != document.querySelectorAll('.g .rc').length) {
-            document.querySelectorAll('.g .rc').forEach(betterGoogleRow);
-            prevResultCount = document.querySelectorAll('.g .rc').length;
+        const selectors = [ '.g .rc', '.g .tF2Cxc' ];
+        for (const selector of selectors) {
+            if (prevResultCount != document.querySelectorAll(selector).length) {
+                document.querySelectorAll(selector).forEach(betterGoogleRow);
+                prevResultCount = document.querySelectorAll(selector).length;
+            }
+            if (prevResultCount != 0) {
+                break;
+            }
         }
         if ( !bettered ) {
             if ( MutationObserver != undefined ) {
