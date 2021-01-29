@@ -5,7 +5,7 @@
 // @description  Don't be evil::revert google search results to older style
 // @author       aligo, adambh, tejaslodaya, drwonky
 // @license      MIT
-// @supportURL   https://github.com/aligo/better-google
+// @supportURL   https://github.com/drwonky/better-google
 // @match        https://*.google.com/search?*
 // @include      /^https?://(?:www|encrypted|ipv[46])\.google\.[^/]+/(?:$|[#?]|search|webhp)/
 // @grant        none
