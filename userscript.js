@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Better Google
 // @namespace    google
-// @version      0.1.15
+// @version      0.1.15.0
 // @description  Don't be evil
-// @author       aligo, adambh, tejaslodaya
+// @author       aligo, adambh, tejaslodaya, drwonky
 // @license      MIT
 // @supportURL   https://github.com/aligo/better-google
 // @match        https://*.google.com/search?*
