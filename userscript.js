@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Google Drwonky
 // @namespace    google
-// @version      0.1.15.0
+// @version      0.1.15.1
 // @description  Don't be evil::revert google search results to older style
 // @author       aligo, adambh, tejaslodaya, drwonky
 // @license      MIT
