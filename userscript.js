@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Better Google Drwonky
+// @name         Better Google
 // @namespace    google
-// @version      0.1.15.1
-// @description  Don't be evil::revert google search results to older style
+// @version      0.1.16
+// @description  Don't be evil
 // @author       aligo, adambh, tejaslodaya, drwonky
 // @license      MIT
-// @homepageURL   https://github.com/drwonky/better-google
+// @supportURL   https://github.com/aligo/better-google
 // @match        https://*.google.com/search?*
 // @include      /^https?://(?:www|encrypted|ipv[46])\.google\.[^/]+/(?:$|[#?]|search|webhp)/
 // @grant        none
@@ -17,10 +17,8 @@
 
     var betterGoogleRow = function(el) {
         var tbwUpd = el.querySelectorAll('.TbwUpd');
-        var aboutResult = el.querySelectorAll('.csDOgf');
-      
         if (tbwUpd.length > 0) {
-            var linkEl = el.querySelector('a');
+            var linkEl = el.querySelector('.yuRUbf > a');
             var addEl = linkEl.nextSibling;
 
             var betterAddEl = document.createElement('div');
@@ -59,7 +57,6 @@
                 urlEl.style.width = maxWidth.toString() + 'px';
             }
 
-            betterEl.appendChild(aboutResult[0]);
 
             tbwUpd.forEach(function(el) { el.remove() });
             linkEl.querySelector('br:first-child').remove();
