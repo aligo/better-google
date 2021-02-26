@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Google
 // @namespace    google
-// @version      0.1.16
+// @version      0.1.16.2
 // @description  Don't be evil
 // @author       aligo, adambh, tejaslodaya, drwonky
 // @license      MIT
@@ -57,7 +57,10 @@
                 urlEl.style.width = maxWidth.toString() + 'px';
             }
 
-
+            var aboutResult = el.querySelectorAll('.csDOgf');
+            if (aboutResult.length > 0) {
+                betterEl.appendChild(aboutResult[0]);
+            }
             tbwUpd.forEach(function(el) { el.remove() });
             linkEl.querySelector('br:first-child').remove();
         }
