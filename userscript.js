@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Better Google Drwonky
+// @name         Better Google
 // @namespace    google
 // @version      0.1.16.3
 // @description  Don't be evil::revert google search results to older style
 // @author       aligo, adambh, tejaslodaya, drwonky
 // @license      MIT
-// @homepageURL   https://github.com/drwonky/better-google
+// @supportURL   https://github.com/aligo/better-google
 // @match        https://*.google.com/search?*
 // @include      /^https?://(?:www|encrypted|ipv[46])\.google\.[^/]+/(?:$|[#?]|search|webhp)/
 // @grant        none

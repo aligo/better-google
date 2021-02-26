@@ -1,5 +1,5 @@
 # Better Google
 
-This is a fork by Drwonky to ensure the script stays current.
+revert google search results to older style
 
-Install on Greasy Fork: <https://greasyfork.org/en/scripts/420865-better-google-drwonky>
+Install on Greasy Fork: <https://greasyfork.org/en/scripts/395257-better-google>
