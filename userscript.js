@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Google
 // @namespace    google
-// @version      0.1.16.2
+// @version      0.1.16.3
 // @description  Don't be evil
 // @author       aligo, adambh, tejaslodaya, drwonky
 // @license      MIT
@@ -89,7 +89,7 @@
         style.setAttribute('media', 'screen');
         style.appendChild(document.createTextNode(''));
         document.head.appendChild(style);
-        style.sheet.insertRule('.btrG { word-break: break-all; line-height: 18px; }');
+        style.sheet.insertRule('.btrG { word-break: normal; line-height: 18px; }');
         style.sheet.insertRule('.btrG .btrAdd { display: inline-block; vertical-align: top; }');
         style.sheet.insertRule('.btrG .btrLink { display: inline-block; vertical-align: top; line-height: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none !important; }');
         style.sheet.insertRule('.btrG .btrLink cite.iUh30 { color: #006621; font-size: 16px; }');
