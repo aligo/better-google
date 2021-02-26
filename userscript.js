@@ -2,7 +2,7 @@
 // @name         Better Google
 // @namespace    google
 // @version      0.1.16.3
-// @description  Don't be evil
+// @description  Don't be evil::revert google search results to older style
 // @author       aligo, adambh, tejaslodaya, drwonky
 // @license      MIT
 // @supportURL   https://github.com/aligo/better-google
