@@ -3,7 +3,7 @@
 // @namespace    google
 // @version      0.1.16.4
 // @description  Don't be evil::revert google search results to older style
-// @author       aligo, adambh, tejaslodaya, drwonky
+// @author       aligo, adambh, tejaslodaya, drwonky, yut23
 // @license      MIT
 // @supportURL   https://github.com/aligo/better-google
 // @match        https://*.google.com/search?*
@@ -43,6 +43,10 @@
                         betterAddEl.appendChild(_el);
                     }
                 }
+            } else {
+                // entry isn't fully loaded yet
+                betterAddEl.remove();
+                return;
             }
 
             var betterEl = document.createElement('div');
@@ -82,9 +86,9 @@
     var bettered = false;
 
     var runBetterGoogle = function() {
-        if (prevResultCount != document.querySelectorAll('.g .yuRUbf').length) {
+        if (prevResultCount != document.querySelectorAll('.g .yuRUbf .rnBE4e').length) {
             document.querySelectorAll('.g .yuRUbf').forEach(betterGoogleRow);
-            prevResultCount = document.querySelectorAll('.g .yuRUbf').length;
+            prevResultCount = document.querySelectorAll('.g .yuRUbf .rnBE4e').length;
         }
         if ( !bettered ) {
             if ( MutationObserver != undefined ) {
