@@ -107,7 +107,7 @@
         document.head.appendChild(style);
         style.sheet.insertRule('.btrG { word-break: normal; line-height: 18px; }');
         style.sheet.insertRule('.btrG .btrAdd { display: inline-block; vertical-align: top; line-height: 0; }');
-        style.sheet.insertRule('.btrG .btrLink { display: inline-block; vertical-align: top; line-height: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none !important; }');
+        style.sheet.insertRule('.btrG .btrLink { display: inline-block; vertical-align: top; line-height: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none !important; color: #006621; }');
         style.sheet.insertRule('.btrG .btrLink cite.iUh30 { color: #006621; font-size: 16px; }');
         // remove extra space used for new multiline link info card
         style.sheet.insertRule('.yuRUbf h3.DKV0Md { margin-top: 0px; }');
