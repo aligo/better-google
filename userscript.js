@@ -101,14 +101,23 @@
     };
 
     var prepareStyleSheet = function() {
+        // if dark mode is enabled (either manually or by device default),
+        // Google adds a meta tag to the document which we can check
+        var link_color = '#006621';
+        var meta_color_scheme = document.querySelector('meta[name="color-scheme"]');
+        if (meta_color_scheme != undefined && meta_color_scheme.content == 'dark') {
+            // use a lighter green in dark mode
+            link_color = '#40965b';
+        }
         var style = document.createElement('style');
         style.setAttribute('media', 'screen');
         style.appendChild(document.createTextNode(''));
         document.head.appendChild(style);
+        style.sheet.insertRule(`:root { --btrG-link-color: ${link_color}; }`);
         style.sheet.insertRule('.btrG { word-break: normal; line-height: 18px; }');
         style.sheet.insertRule('.btrG .btrAdd { display: inline-block; vertical-align: top; line-height: 0; }');
-        style.sheet.insertRule('.btrG .btrLink { display: inline-block; vertical-align: top; line-height: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none !important; color: #006621; }');
-        style.sheet.insertRule('.btrG .btrLink cite.iUh30 { color: #006621; font-size: 16px; }');
+        style.sheet.insertRule('.btrG .btrLink { display: inline-block; vertical-align: top; line-height: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none !important; color: var(--btrG-link-color); }');
+        style.sheet.insertRule('.btrG .btrLink cite.iUh30 { color: var(--btrG-link-color); font-size: 16px; }');
         // remove extra space used for new multiline link info card
         style.sheet.insertRule('.yuRUbf h3.DKV0Md { margin-top: 0px; }');
     };
