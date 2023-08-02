@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Google
 // @namespace    google
-// @version      0.1.16.4
+// @version      0.1.16.5
 // @description  Don't be evil::revert google search results to older style
 // @author       aligo, adambh, tejaslodaya, drwonky, yut23
 // @license      MIT
