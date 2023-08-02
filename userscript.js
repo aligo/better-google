@@ -86,9 +86,9 @@
     var bettered = false;
 
     var runBetterGoogle = function() {
-        if (prevResultCount != document.querySelectorAll('.g .yuRUbf .rnBE4e').length) {
+        if (prevResultCount != document.querySelectorAll('.g .yuRUbf').length) {
             document.querySelectorAll('.g .yuRUbf').forEach(betterGoogleRow);
-            prevResultCount = document.querySelectorAll('.g .yuRUbf .rnBE4e').length;
+            prevResultCount = document.querySelectorAll('.g .yuRUbf').length;
         }
         if ( !bettered ) {
             if ( MutationObserver != undefined ) {
