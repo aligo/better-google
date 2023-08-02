@@ -18,7 +18,19 @@
     var betterGoogleRow = function(el) {
         var tbwUpd = el.querySelectorAll('.TbwUpd');
         if (tbwUpd.length > 0) {
-            var linkEl = el.querySelector('.yuRUbf > a');
+            /* Google does A/B testing on the search results page, so the
+             * structure of the page is not always the same.  This code
+             * tries to find the link element in a few different ways.
+             * If it can't find it, it just gives up and doesn't do
+             * anything.
+             */
+            var selectors = [ '.yuRUbf > a', '.yuRUbf > div > a' ];
+            for (const selector of selectors) {
+                var linkEl = el.querySelector(selector);
+                if (linkEl) {
+                    break;
+                }
+            }
             var addEl = linkEl.nextSibling;
 
             var betterAddEl = document.createElement('div');
