@@ -37,6 +37,7 @@
             betterAddEl.className = 'btrAdd';
 
             if (addEl) {
+                // this loop moves the "More options" button into betterAddEl
                 for (var i = 0; i < addEl.children.length; i++) {
                     var _el = addEl.children[i];
                     if (_el.className.indexOf('TbwUpd') == -1) {
