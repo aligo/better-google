@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Better Google
+// @name         Better Google Drwonky
 // @namespace    google
 // @version      0.1.16.5
-// @description  Don't be evil::revert google search results to older style
+// @description  Restore google search results to older style with green link below title instead of link above title.  Just tweaks the CSS and does some dynamic JS reordering of the DIVs.
 // @author       aligo, adambh, tejaslodaya, drwonky, yut23
 // @license      MIT
-// @supportURL   https://github.com/aligo/better-google
+// @homepageURL   https://github.com/drwonky/better-google
 // @match        https://*.google.com/search?*
 // @include      /^https?://(?:www|encrypted|ipv[46])\.google\.[^/]+/(?:$|[#?]|search|webhp)/
 // @grant        none
