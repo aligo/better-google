@@ -24,7 +24,11 @@
              * If it can't find it, it just gives up and doesn't do
              * anything.
              */
-            var selectors = [ '.yuRUbf > a', '.yuRUbf > div > a' ];
+            var selectors = [
+                '.yuRUbf > a',
+                '.yuRUbf > div > a',
+                '.yuRUbf > div > span > a',
+            ];
             for (const selector of selectors) {
                 var linkEl = el.querySelector(selector);
                 if (linkEl) {
@@ -32,6 +36,10 @@
                 }
             }
             var addEl = linkEl.nextSibling;
+            if (!addEl) {
+                // try the parent's sibling, for the span case
+                addEl = linkEl.parentElement.nextSibling;
+            }
 
             var betterAddEl = document.createElement('div');
             betterAddEl.className = 'btrAdd';
