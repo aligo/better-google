@@ -7,7 +7,7 @@ times, as a point of reference for when Google changes things.
 
 ```
 <div class="yuRUbf"> (el)
-  <a href="[url]"> (linkEl)
+  <a href="[URL]"> (linkEl)
     <br>
     <h3>[Page Title]</h3>
     <div class="TbwUpd NJjxre iUh30 ojE3Fb">
@@ -44,7 +44,7 @@ After our changes:
 
 ```
 <div class="yuRUbf">
-  <a href="url">
+  <a href="[URL]">
     <h3>[Page Title]</h3>
   </a>
   <div class="B6fmyf ..."></div>
@@ -94,7 +94,7 @@ Adds an extra div at the top level. Handled in #21.
 ```
 <div class="yuRUbf"> (el)
   <div>
-    <a href="url"> (linkEl)
+    <a href="[URL]"> (linkEl)
       <br>
       <h3>[Page Title]</h3>
       <div class="TbwUpd NJjxre iUh30 ojE3Fb">
@@ -116,6 +116,54 @@ Adds an extra div at the top level. Handled in #21.
           <div class="iTPLzd rNSxBe lUn2nc" aria-label="About this result">
             <span class="D6lY4c mBswFe">
               <span class="xTFaxe z1asCe">
+                <svg>...</svg>
+              </span>
+            </span>
+          </div>
+          <span jsname="zOVa8"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+## 2023-09-08
+
+Adds a span around `linkEl`.
+
+```
+<div class="yuRUbf">
+  <div>
+    <span jscontroller="msmzHf" role="link">
+      <a href="[URL]"> (linkEl)
+        <br>
+        <h3 class="LC20lb MBeuO DKV0Md">[Page Title]</h3>
+        <div class="TbwUpd NJjxre iUh30 ojE3Fb">
+          <span class="H9lube">
+            <div class="eqA2re NjwKYd Vwoesf" aria-hidden="true">
+              <img class="XNo5Ab" [icon]>
+            </div>
+          </span>
+          <div>
+            <span class="VuuXrf">[Site Name]</span>
+            <div class="byrV5b">
+              <cite class="qLRx3b tjvcx GvPZzd cHaqb" role="text">[Formatted URL]</cite>
+            </div>
+          </div>
+        </div>
+      </a>
+    </span>
+    <div class="B6fmyf byrV5b Mg1HEd"> (addEl)
+      <div class="TbwUpd iUh30 ojE3Fb">
+        ... (same contents as previous div.TbwUpd)
+      </div>
+      <div class="csDOgf BCF2pd ezY6nb L48a4c">
+        <div jscontroller="exgaYe">
+          <div role="button" class="iTPLzd rNSxBe lUn2nc" aria-label="About this result">
+            <span jsname="czHhOd" class="D6lY4c mBswFe">
+              <span jsname="Bil8Ae" class="xTFaxe z1asCe">
                 <svg>...</svg>
               </span>
             </span>
