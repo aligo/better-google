@@ -114,7 +114,7 @@
         // Google adds a meta tag to the document which we can check
         var link_color = '#006621';
         var meta_color_scheme = document.querySelector('meta[name="color-scheme"]');
-        if (meta_color_scheme != undefined && meta_color_scheme.content == 'dark') {
+        if (meta_color_scheme != undefined && meta_color_scheme.content.includes('dark')) {
             // use a lighter green in dark mode
             link_color = '#40965b';
         }
