@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Google Drwonky
 // @namespace    google
-// @version      0.1.16.6
+// @version      0.1.16.7
 // @description  Restore google search results to older style with green link below title instead of link above title.  Just tweaks the CSS and does some dynamic JS reordering of the DIVs.
 // @author       aligo, adambh, tejaslodaya, drwonky, yut23
 // @license      MIT
