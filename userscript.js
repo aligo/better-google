@@ -16,7 +16,7 @@
     'use strict';
 
     var betterGoogleRow = function(el) {
-        var tbwUpd = el.querySelectorAll('.TbwUpd');
+        var tbwUpd = el.querySelectorAll('.TbwUpd, .HGLrXd');
         if (tbwUpd.length > 0) {
             /* Google does A/B testing on the search results page, so the
              * structure of the page is not always the same.  This code
@@ -48,9 +48,10 @@
                 // this loop moves the "More options" button into betterAddEl
                 for (var i = 0; i < addEl.children.length; i++) {
                     var _el = addEl.children[i];
-                    if (_el.className.indexOf('TbwUpd') == -1) {
-                        betterAddEl.appendChild(_el);
+                    if (_el.className.includes('TbwUpd') || _el.className.includes('HGLrXd')) {
+                        continue;
                     }
+                    betterAddEl.appendChild(_el);
                 }
             } else {
                 // entry isn't fully loaded yet

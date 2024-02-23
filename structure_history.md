@@ -22,7 +22,7 @@ times, as a point of reference for when Google changes things.
   </a>
   <div class="B6fmyf ..."> (addEl)
     <div class="TbwUpd iUh30 ojE3Fb">
-      ... (same contents as previous div.TbwUpd)
+      ... (same contents as previous div.TbwUpd, with the icon removed)
     </div>
     <div class="rnBE4e AvMtcb"> [More options button]
       <div jscontroller="exgaYe">
@@ -109,7 +109,7 @@ Adds an extra div at the top level. Handled in #21.
     </a>
     <div class="B6fmyf byrV5b Mg1HEd"> (addEl)
       <div class="TbwUpd iUh30 ojE3Fb">
-        ... (same contents as previous div.TbwUpd)
+        ... (same contents as previous div.TbwUpd, with the icon removed)
       </div>
       <div class="csDOgf BCF2pd L48a4c"> [About this result button]
         <div jscontroller="exgaYe">
@@ -157,7 +157,7 @@ Adds a span around `linkEl`.
     </span>
     <div class="B6fmyf byrV5b Mg1HEd"> (addEl)
       <div class="TbwUpd iUh30 ojE3Fb">
-        ... (same contents as previous div.TbwUpd)
+        ... (same contents as previous div.TbwUpd, with the icon removed)
       </div>
       <div class="csDOgf BCF2pd ezY6nb L48a4c">
         <div jscontroller="exgaYe">
@@ -169,6 +169,63 @@ Adds a span around `linkEl`.
             </span>
           </div>
           <span jsname="zOVa8"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+## 2024-02-22
+
+Renames .TbwUpd to .HGLrXd and adds div.q0vns immediately inside it; adds
+several extra divs to the "About this result" button
+
+```
+<div class="yuRUbf">
+  <div>
+    <span jscontroller="msmzHf">
+      <a href="[URL]"> (linkEl)
+        <br>
+        <h3 class="LC20lb MBeuO DKV0Md">[Page Title]</h3>
+        <div class="notranslate HGLrXd NJjxre iUh30 ojE3Fb">
+          <div class="q0vns">
+            <span class="H9lube">
+              <div class="eqA2re NjwKYd Vwoesf" aria-hidden="true">
+                <img class="XNo5Ab" [icon]>
+              </div>
+            </span>
+            <div class="GTRloc">
+              <span class="VuuXrf">[Site Name]</span>
+              <div class="byrV5b">
+                <cite class="qLRx3b tjvcx GvPZzd cHaqb" role="text">[Formatted URL]</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span jscontroller="IX53Tb"></span>
+      </a>
+    </span>
+    <div class="B6fmyf byrV5b Mg1HEd">
+      <div class="HGLrXd iUh30 ojE3Fb"><div class="q0vns">
+        ... (same contents as previous div.HGLrXd, with the icon removed)
+      </div>
+      <div class="csDOgf BCF2pd ezY6nb L48a4c">
+        <div jscontroller="gOTY1">
+          <div>
+            <div jscontroller="RJ1Nyd" role="button">
+              <div>
+                <div class="MJ8UF iTPLzd rNSxBe eY4mx lUn2nc" aria-label="About this result">
+                  <span jsname="czHhOd" class="D6lY4c mBswFe">
+                    <span jsname="Bil8Ae" class="xTFaxe z1asCe">
+                      <svg>...</svg>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
