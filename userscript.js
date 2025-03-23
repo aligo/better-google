@@ -40,23 +40,21 @@
                 // try the parent's sibling, for the span case
                 addEl = linkEl.parentElement.nextSibling;
             }
+            if (!addEl) {
+                // entry isn't fully loaded yet
+                return;
+            }
 
             var betterAddEl = document.createElement('div');
             betterAddEl.className = 'btrAdd';
 
-            if (addEl) {
-                // this loop moves the "More options" button into betterAddEl
-                for (var i = 0; i < addEl.children.length; i++) {
-                    var _el = addEl.children[i];
-                    if (_el.className.includes('TbwUpd') || _el.className.includes('HGLrXd')) {
-                        continue;
-                    }
-                    betterAddEl.appendChild(_el);
+            // this loop moves the "More options" button into betterAddEl
+            for (var i = 0; i < addEl.children.length; i++) {
+                var _el = addEl.children[i];
+                if (_el.className.includes('TbwUpd') || _el.className.includes('HGLrXd')) {
+                    continue;
                 }
-            } else {
-                // entry isn't fully loaded yet
-                betterAddEl.remove();
-                return;
+                betterAddEl.appendChild(_el);
             }
 
             var betterEl = document.createElement('div');
