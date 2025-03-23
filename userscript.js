@@ -88,7 +88,11 @@
                 betterEl.appendChild(aboutResult[0]);
             }
             tbwUpd.forEach(function(el) { el.remove() });
-            linkEl.querySelector('br:first-child').remove();
+
+            var brEl = linkEl.querySelector('br:first-child');
+            if (brEl) {
+                brEl.remove();
+            }
         }
     }
 
@@ -96,9 +100,9 @@
     var bettered = false;
 
     var runBetterGoogle = function() {
-        if (prevResultCount != document.querySelectorAll('.g .yuRUbf').length) {
-            document.querySelectorAll('.g .yuRUbf').forEach(betterGoogleRow);
-            prevResultCount = document.querySelectorAll('.g .yuRUbf').length;
+        if (prevResultCount != document.querySelectorAll('.wHYlTd .yuRUbf').length) {
+            document.querySelectorAll('.wHYlTd .yuRUbf').forEach(betterGoogleRow);
+            prevResultCount = document.querySelectorAll('.wHYlTd .yuRUbf').length;
         }
         if ( !bettered ) {
             if ( MutationObserver != undefined ) {
