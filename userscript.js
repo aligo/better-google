@@ -98,9 +98,9 @@
     var bettered = false;
 
     var runBetterGoogle = function() {
-        if (prevResultCount != document.querySelectorAll('.wHYlTd .yuRUbf').length) {
-            document.querySelectorAll('.wHYlTd .yuRUbf').forEach(betterGoogleRow);
-            prevResultCount = document.querySelectorAll('.wHYlTd .yuRUbf').length;
+        if (prevResultCount != document.querySelectorAll('.MjjYud .yuRUbf').length) {
+            document.querySelectorAll('.MjjYud .yuRUbf').forEach(betterGoogleRow);
+            prevResultCount = document.querySelectorAll('.MjjYud .yuRUbf').length;
         }
         if ( !bettered ) {
             if ( MutationObserver != undefined ) {
