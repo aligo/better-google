@@ -159,7 +159,7 @@ Adds a span around `linkEl`.
       <div class="TbwUpd iUh30 ojE3Fb">
         ... (same contents as previous div.TbwUpd, with the icon removed)
       </div>
-      <div class="csDOgf BCF2pd ezY6nb L48a4c">
+      <div class="csDOgf BCF2pd ezY6nb L48a4c"> [About this result button]
         <div jscontroller="exgaYe">
           <div role="button" class="iTPLzd rNSxBe lUn2nc" aria-label="About this result">
             <span jsname="czHhOd" class="D6lY4c mBswFe">
@@ -211,7 +211,7 @@ several extra divs to the "About this result" button
       <div class="HGLrXd iUh30 ojE3Fb"><div class="q0vns">
         ... (same contents as previous div.HGLrXd, with the icon removed)
       </div>
-      <div class="csDOgf BCF2pd ezY6nb L48a4c">
+      <div class="csDOgf BCF2pd ezY6nb L48a4c"> [About this result button]
         <div jscontroller="gOTY1">
           <div>
             <div jscontroller="RJ1Nyd" role="button">
@@ -219,6 +219,68 @@ several extra divs to the "About this result" button
                 <div class="MJ8UF iTPLzd rNSxBe eY4mx lUn2nc" aria-label="About this result">
                   <span jsname="czHhOd" class="D6lY4c mBswFe">
                     <span jsname="Bil8Ae" class="xTFaxe z1asCe">
+                      <svg>...</svg>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+## 2025-03-23
+
+* `.g` -> `.wHYlTd` in parent div
+* removed initial `<br>` inside `linkEl`
+* removed `.iUh30` and `.NJjxre` from `div.HGLrXd`
+* `.H9lube` -> `.DDKf1c` (sometimes)
+* `.NjwKYd` -> `.UnOTSe`
+* `.GTRloc` -> `.CA5RN`
+
+```
+<div class="yuRUbf">
+  <div class="b8lM7">
+    <span jscontroller="msmzHf">
+      <a jsname="UWckNb" class="zReHs" href="[URL]"> (linkEl)
+        <h3 class="LC20lb MBeuO DKV0Md">[Page Title]</h3>
+        <div class="notranslate HGLrXd ojE3Fb">
+          <div class="q0vns">
+            <span class="DDKf1c"> or <span class="H9lube">
+              <div class="eqA2re UnOTSe Vwoesf" aria-hidden="true">
+                <img class="XNo5Ab" [icon]>
+              </div>
+            </span>
+            <div class="CA5RN">
+              <div>
+                <span class="VuuXrf">[Site Name]</span>
+              </div>
+              <div class="byrV5b">
+                <cite class="qLRx3b tjvcx GvPZzd cHaqb" role="text">[Formatted URL]</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span jscontroller="IX53Tb"></span>
+      </a>
+    </span>
+    <div class="B6fmyf byrV5b Mg1HEd"> (addEl)
+      <div class="HGLrXd ojE3Fb"><div class="q0vns">
+        ... (same contents as previous div.HGLrXd, with the icon and `aria-hidden="true"` removed)
+      </div></div>
+      <div class="csDOgf BCF2pd ezY6nb L48a4c"> [About this result button]
+        <div jscontroller="gOTY1">
+          <div>
+            <div jscontroller="PbHo4e">
+              <div>
+                <div class="MJ8UF iTPLzd rNSxBe eY4mx lUn2nc" aria-label="About this result">
+                  <span class="D6lY4c mBswFe">
+                    <span class="xTFaxe z1asCe">
                       <svg>...</svg>
                     </span>
                   </span>
