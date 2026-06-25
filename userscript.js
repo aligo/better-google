@@ -81,9 +81,9 @@
                 urlEl.style.width = maxWidth.toString() + 'px';
             }
 
-            var aboutResult = el.querySelectorAll('.csDOgf');
-            if (aboutResult.length > 0) {
-                betterEl.appendChild(aboutResult[0]);
+            var aboutResult = el.querySelector('.csDOgf');
+            if (aboutResult && aboutResult.parentElement !== betterAddEl) {
+                betterAddEl.appendChild(aboutResult);
             }
             tbwUpd.forEach(function(el) { el.remove() });
 
