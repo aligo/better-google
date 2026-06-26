@@ -126,9 +126,11 @@
         style.appendChild(document.createTextNode(''));
         document.head.appendChild(style);
         style.sheet.insertRule(`:root { --btrG-link-color: ${link_color}; }`);
-        style.sheet.insertRule('.btrG { word-break: normal; line-height: 18px; }');
-        style.sheet.insertRule('.btrG .btrAdd { display: inline-block; vertical-align: top; line-height: 0; }');
-        style.sheet.insertRule('.btrG .btrLink { display: inline-block; vertical-align: top; line-height: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none !important; color: var(--btrG-link-color); }');
+        style.sheet.insertRule('.btrG { display: flex; align-items: center; gap: 6px; word-break: normal; line-height: 18px; }');
+        style.sheet.insertRule('.btrG .btrAdd { display: inline-flex; align-items: center; flex: 0 0 auto; line-height: 18px; }');
+        style.sheet.insertRule('.btrG .btrAdd .csDOgf { display: inline-flex; align-items: center; height: 18px; margin: 0; padding: 0; }');
+        style.sheet.insertRule('.btrG .btrAdd .csDOgf > div, .btrG .btrAdd .csDOgf [role="button"] { display: inline-flex; align-items: center; height: 18px; margin: 0; padding: 0; }');
+        style.sheet.insertRule('.btrG .btrLink { display: block; flex: 0 1 auto; min-width: 0; line-height: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none !important; color: var(--btrG-link-color); }');
         style.sheet.insertRule('.btrG .btrLink cite.iUh30 { color: var(--btrG-link-color); font-size: 16px; }');
         // remove extra space used for new multiline link info card
         style.sheet.insertRule('.yuRUbf h3.DKV0Md { margin-top: 0px; }');
